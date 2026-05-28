@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tindalytics | Professional Websites for Filipino Small Businesses</title>
+<meta name="description" content="Make your business look trusted online in 7 days. One-time payment. No monthly fees. Made for Filipino small business owners.">
+<meta property="og:title" content="Tindalytics | Professional Websites for Filipino Small Businesses">
+<meta property="og:description" content="Stop sending messy screenshots. Give customers one professional link. One-time payment, no monthly fees.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #0A1628;
+  --navy-2: #14233D;
+  --navy-3: #1B2E4D;
+  --blue: #017BFD;
+  --blue-soft: #4A9DFF;
+  --cream: #FAFAF7;
+  --cream-2: #F4F2EC;
+  --line: #E8E4DA;
+  --ink: #0A1628;
+  --ink-soft: #4A5468;
+  --ink-mute: #7A8499;
+  --success: #2D7A4F;
+  --warn: #C84B3A;
+  --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.06);
+  --shadow-md: 0 10px 30px rgba(10, 22, 40, 0.08);
+  --shadow-lg: 0 24px 60px rgba(10, 22, 40, 0.12);
+  --radius: 14px;
+  --radius-lg: 22px;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: var(--ink);
+}
+h1 {
+  font-size: clamp(2.2rem, 6.5vw, 4.4rem);
+  font-variation-settings: 'opsz' 144, 'SOFT' 30;
+}
+h2 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-variation-settings: 'opsz' 100, 'SOFT' 20;
+}
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+  font-variation-settings: 'opsz' 60;
+}
+p { color: var(--ink-soft); font-size: clamp(1rem, 1.4vw, 1.1rem); }
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--navy);
+  color: var(--cream);
+}
+.btn-primary:hover {
+  background: var(--blue);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.btn-light {
+  background: var(--cream);
+  color: var(--navy);
+}
+.btn-light:hover {
+  background: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+  padding: 11px 22px;
+  font-size: 0.92rem;
+}
+.btn-outline:hover {
+  background: var(--navy);
+  color: var(--cream);
+}
+.btn .arrow {
+  transition: transform 0.2s ease;
+}
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 250, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  z-index: 100;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+.logo img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.hero-text { text-align: left; }
+.hero h1 { margin-bottom: 24px; }
+.hero h1 em {
+  font-style: italic;
+  color: var(--blue);
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+}
+.hero-sub {
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  color: var(--ink-soft);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.trust-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 0.88rem;
+  color: var(--ink-mute);
+}
+.trust-indicators span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.trust-indicators .check {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: var(--blue);
+  border-radius: 50%;
+  position: relative;
+}
+.trust-indicators .check::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 2.5px;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+/* Hero visual mockup */
+.hero-visual {
+  position: relative;
+}
+.browser-frame {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.browser-bar {
+  background: var(--cream-2);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.browser-dot:nth-child(1) { background: #FF5F57; }
+.browser-dot:nth-child(2) { background: #FEBC2E; }
+.browser-dot:nth-child(3) { background: #28C840; }
+.browser-url {
+  margin-left: 12px;
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+  background: white;
+  padding: 4px 12px;
+  border-radius: 999px;
+  flex: 1;
+  max-width: 240px;
+}
+
+.hero-mockup-body {
+  padding: 22px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFAF7 100%);
+  aspect-ratio: 16/11;
+}
+.mock-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.mock-logo {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--navy);
+}
+.mock-nav-links {
+  display: flex;
+  gap: 14px;
+}
+.mock-nav-links span {
+  width: 30px;
+  height: 6px;
+  background: var(--line);
+  border-radius: 3px;
+}
+.mock-hero-title {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: var(--navy);
+  margin-bottom: 8px;
+  max-width: 85%;
+}
+.mock-hero-sub {
+  height: 8px;
+  background: var(--line);
+  border-radius: 4px;
+  max-width: 70%;
+  margin-bottom: 6px;
+}
+.mock-hero-sub:nth-of-type(2) { max-width: 50%; margin-bottom: 18px; }
+.mock-cta {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--navy);
+  color: var(--cream);
+  font-size: 0.72rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.mock-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 22px;
+}
+.mock-card {
+  background: var(--cream-2);
+  border-radius: 8px;
+  padding: 12px 10px;
+  aspect-ratio: 1/1.1;
+}
+.mock-card-img {
+  width: 100%;
+  aspect-ratio: 1.5/1;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-soft) 100%);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.mock-card:nth-child(2) .mock-card-img { background: linear-gradient(135deg, #E8A87C 0%, #C38D9E 100%); }
+.mock-card:nth-child(3) .mock-card-img { background: linear-gradient(135deg, #41B3A3 0%, #85DCBA 100%); }
+.mock-card-line {
+  height: 5px;
+  background: var(--line);
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+.mock-card-line.short { width: 60%; }
+
+.floating-badge {
+  position: absolute;
+  background: white;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.floating-badge .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.fb-1 { top: 20px; right: -10px; }
+.fb-2 { bottom: 30px; left: -16px; }
+
+/* SECTION COMMON */
+section {
+  padding: 80px 0;
+}
+.section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+.section-head p {
+  margin-top: 16px;
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+}
+
+/* NO FEES SECTION */
+.no-fees {
+  background: var(--navy);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.no-fees::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 50%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(1, 123, 253, 0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+.no-fees h2 { color: var(--cream); }
+.no-fees p { color: rgba(250, 250, 247, 0.72); }
+.no-fees .eyebrow { color: var(--blue-soft); }
+
+.fees-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.fees-headline {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  line-height: 0.95;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+.fees-headline .strike {
+  position: relative;
+  color: rgba(250, 250, 247, 0.4);
+}
+.fees-headline .strike::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -4%;
+  width: 108%;
+  height: 4px;
+  background: var(--warn);
+  transform: rotate(-6deg);
+}
+.fees-headline em {
+  font-style: italic;
+  color: var(--blue-soft);
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+}
+.fees-list {
+  list-style: none;
+  display: grid;
+  gap: 18px;
+}
+.fees-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 1.05rem;
+  color: rgba(250, 250, 247, 0.92);
+}
+.fees-list li .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--blue-soft);
+  min-width: 28px;
+  padding-top: 1px;
+}
+.fees-list li strong {
+  font-weight: 600;
+  color: var(--cream);
+}
+
+/* WHO FOR */
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.who-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+.who-card:hover {
+  border-color: var(--navy);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.who-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--cream-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: var(--navy);
+}
+.who-card h4 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.who-card p {
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+  line-height: 1.5;
+}
+
+/* PORTFOLIO */
+.portfolio { background: var(--cream-2); }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+.portfolio-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid var(--line);
+}
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.portfolio-mock {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-info {
+  padding: 24px 24px 28px;
+}
+.portfolio-info .category {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+.portfolio-info h4 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.portfolio-info p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.mobile-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--cream-2);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+/* Portfolio mockup variations */
+.mock-cafe {
+  background: linear-gradient(135deg, #E8C8A0 0%, #C99B6A 100%);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mock-restaurant {
+  background: linear-gradient(135deg, #2D1810 0%, #5C2E1F 100%);
+  padding: 24px;
+  color: white;
+}
+.mock-clinic {
+  background: linear-gradient(135deg, #E8F4F8 0%, #B8DCE8 100%);
+  padding: 24px;
+}
+.mock-salon {
+  background: linear-gradient(135deg, #F4E4E4 0%, #D9A5A5 100%);
+  padding: 24px;
+}
+.mock-store {
+  background: linear-gradient(135deg, #1E3A2E 0%, #2D5A40 100%);
+  padding: 24px;
+  color: white;
+}
+.mp-title {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  line-height: 1.05;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.mp-sub {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.mp-tagline {
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+.mp-pill {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--navy);
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+.mock-restaurant .mp-pill,
+.mock-store .mp-pill {
+  background: rgba(255, 255, 255, 0.95);
+}
+.mp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 12px;
+}
+.mp-grid div {
+  aspect-ratio: 1/1;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+}
+.mock-restaurant .mp-grid div,
+.mock-store .mp-grid div {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* BEFORE / AFTER */
+.ba-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.ba-card {
+  padding: 32px 28px;
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+.ba-before {
+  background: #FDF3F1;
+  border: 1px solid #F2D7D2;
+}
+.ba-after {
+  background: var(--navy);
+  color: var(--cream);
+}
+.ba-label {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.ba-before .ba-label {
+  background: var(--warn);
+  color: white;
+}
+.ba-after .ba-label {
+  background: var(--blue);
+  color: white;
+}
+.ba-card h3 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.ba-after h3 { color: var(--cream); }
+.ba-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+.ba-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.ba-list li .x,
+.ba-list li .v {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.ba-list li .x {
+  background: var(--warn);
+  color: white;
+}
+.ba-list li .v {
+  background: var(--blue);
+  color: white;
+}
+.ba-after .ba-list li { color: rgba(250, 250, 247, 0.9); }
+.ba-before .ba-list li { color: var(--ink-soft); }
+
+/* PACKAGES */
+.packages { background: var(--cream-2); }
+.pkg-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.pkg-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  border: 1.5px solid var(--line);
+  position: relative;
+  transition: all 0.3s ease;
+}
+.pkg-card.featured {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--cream);
+  transform: scale(1);
+}
+.pkg-card.featured h3,
+.pkg-card.featured .price { color: var(--cream); }
+.pkg-card.featured .pkg-list li { color: rgba(250, 250, 247, 0.9); }
+.pkg-card.featured .pkg-list li .check-circle { background: var(--blue); }
+.best-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue);
+  color: white;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.pkg-card h3 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.pkg-tag {
+  font-size: 0.85rem;
+  color: var(--ink-mute);
+  margin-bottom: 22px;
+}
+.pkg-card.featured .pkg-tag { color: rgba(250, 250, 247, 0.65); }
+.price {
+  font-family: var(--serif);
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.price-note {
+  font-size: 0.82rem;
+  color: var(--ink-mute);
+  margin-bottom: 28px;
+}
+.pkg-card.featured .price-note { color: rgba(250, 250, 247, 0.65); }
+.pkg-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.pkg-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 9px 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+}
+.pkg-card.featured .pkg-list li { border-top-color: rgba(250, 250, 247, 0.12); }
+.pkg-list li:first-child { border-top: none; padding-top: 0; }
+.check-circle {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.pkg-card .btn { width: 100%; justify-content: center; }
+.pkg-card.featured .btn-primary { background: var(--blue); color: white; }
+.pkg-card.featured .btn-primary:hover { background: var(--cream); color: var(--navy); }
+
+/* PROCESS */
+.process-list {
+  display: grid;
+  gap: 0;
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+.process-step {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  align-items: flex-start;
+}
+.process-step:last-child { border-bottom: none; }
+.process-num {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-style: italic;
+  color: var(--blue);
+  font-weight: 400;
+  line-height: 1;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+}
+.process-content h4 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.process-content p {
+  font-size: 0.96rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* TRUST */
+.trust-section { background: var(--cream-2); }
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.trust-item {
+  background: white;
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  text-align: left;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+}
+.trust-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trust-item h4 {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.trust-item p {
+  font-size: 0.85rem;
+  color: var(--ink-mute);
+  line-height: 1.45;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+.faq-item {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.faq-item[open] {
+  border-color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--navy);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-toggle {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cream-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] .faq-toggle {
+  background: var(--blue);
+  color: white;
+  transform: rotate(45deg);
+}
+.faq-answer {
+  padding: 0 24px 24px;
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--navy);
+  color: var(--cream);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(1, 123, 253, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(1, 123, 253, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+.final-cta .container { position: relative; z-index: 1; }
+.final-cta h2 {
+  color: var(--cream);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin-bottom: 22px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.final-cta h2 em {
+  font-style: italic;
+  color: var(--blue-soft);
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+}
+.final-cta p {
+  color: rgba(250, 250, 247, 0.7);
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  color: rgba(250, 250, 247, 0.6);
+  padding: 40px 0;
+  border-top: 1px solid rgba(250, 250, 247, 0.08);
+  text-align: center;
+  font-size: 0.88rem;
+}
+footer .logo { margin-bottom: 14px; display: inline-flex; }
+footer .logo img { height: 38px; }
+
+/* RESPONSIVE */
+@media (min-width: 720px) {
+  .who-grid { grid-template-columns: repeat(3, 1fr); }
+  .ba-grid { grid-template-columns: 1fr 1fr; }
+  .trust-grid { grid-template-columns: repeat(3, 1fr); }
+  .pkg-grid { grid-template-columns: 1fr 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+  .fees-grid { grid-template-columns: 1.2fr 1fr; }
+  .portfolio-card:first-child { grid-column: 1 / -1; }
+  .portfolio-card:first-child .portfolio-mock { height: 280px; }
+}
+
+@media (min-width: 1024px) {
+  section { padding: 110px 0; }
+  .hero { padding: 80px 0 110px; }
+  .hero-grid { grid-template-columns: 1.05fr 1fr; }
+  .who-grid { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+  .portfolio-card:first-child { grid-column: 1 / -1; }
+  .portfolio-card:first-child .portfolio-mock { height: 340px; }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero h1, .hero-sub, .hero-cta-row, .trust-indicators {
+  animation: fadeUp 0.7s ease backwards;
+}
+.hero-sub { animation-delay: 0.1s; }
+.hero-cta-row { animation-delay: 0.2s; }
+.trust-indicators { animation-delay: 0.3s; }
+.hero-visual { animation: fadeUp 0.9s ease 0.2s backwards; }
+.floating-badge { animation: fadeUp 0.9s ease 0.5s backwards; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo"><img src="logo-color.png" alt="Tindalytics"></a>
+    <a href="https://ig.me/m/tindalytics" class="btn btn-outline">Message Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Websites for Filipino businesses</span>
+        <h1>Make your business look <em>trusted online</em> in 7 days.</h1>
+        <p class="hero-sub">Stop sending messy screenshots, old posts, and incomplete information. Give customers one professional link instead.</p>
+        <div class="hero-cta-row">
+          <a href="https://ig.me/m/tindalytics" class="btn btn-primary">
+            Get your website started
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="trust-indicators">
+          <span><span class="check"></span>Mobile friendly</span>
+          <span><span class="check"></span>No monthly fees</span>
+          <span><span class="check"></span>Fast setup</span>
+          <span><span class="check"></span>Made for Filipino businesses</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-url">yourbusiness.com</span>
+          </div>
+          <div class="hero-mockup-body">
+            <div class="mock-nav">
+              <div class="mock-logo">Maria&rsquo;s Kitchen</div>
+              <div class="mock-nav-links">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="mock-hero-title">Home cooked meals, delivered fresh.</div>
+            <div class="mock-hero-sub"></div>
+            <div class="mock-hero-sub"></div>
+            <div class="mock-cta">Order Now →</div>
+            <div class="mock-cards">
+              <div class="mock-card">
+                <div class="mock-card-img"></div>
+                <div class="mock-card-line"></div>
+                <div class="mock-card-line short"></div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-img"></div>
+                <div class="mock-card-line"></div>
+                <div class="mock-card-line short"></div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-img"></div>
+                <div class="mock-card-line"></div>
+                <div class="mock-card-line short"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-badge fb-1">
+          <span class="icon">✓</span>
+          <span>Mobile ready</span>
+        </div>
+        <div class="floating-badge fb-2">
+          <span class="icon">7</span>
+          <span>Days delivery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NO MONTHLY FEES -->
+<section class="no-fees" id="pricing-promise">
+  <div class="container">
+    <div class="fees-grid">
+      <div>
+        <span class="eyebrow">No hidden fees ever</span>
+        <div class="fees-headline">
+          <span class="strike">₱2,500</span><br>
+          monthly fees? <em>No.</em>
+        </div>
+        <p style="max-width: 480px; margin-top: 8px;">Most agencies lock you into monthly subscriptions. You pay forever and never own anything. We do the opposite.</p>
+      </div>
+      <ul class="fees-list">
+        <li>
+          <span class="num">01</span>
+          <div>
+            <strong>One-time payment.</strong><br>
+            <span style="color: rgba(250, 250, 247, 0.7);">Pay once. Own your website. No surprise bills next month or next year.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <div>
+            <strong>Hosted under your own account.</strong><br>
+            <span style="color: rgba(250, 250, 247, 0.7);">Your domain. Your hosting. Your control. We just build it for you.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <div>
+            <strong>No lock-in. No forced subscriptions.</strong><br>
+            <span style="color: rgba(250, 250, 247, 0.7);">Walk away anytime. Keep your website. We do not hold your business hostage.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <div>
+            <strong>Only yearly domain renewal.</strong><br>
+            <span style="color: rgba(250, 250, 247, 0.7);">Around ₱600 a year, paid directly to your domain provider. That is it.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="who-for">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Who this is for</span>
+      <h2>Built for the businesses I know.</h2>
+      <p>I am a Filipino online seller myself. I understand what local businesses actually need to look professional online without overpaying.</p>
+    </div>
+
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l4-7h10l4 7"></path><path d="M3 11h18v9H3z"></path><path d="M8 11v9M16 11v9"></path></svg>
+        </div>
+        <h4>Food businesses</h4>
+        <p>Show your menu, prices, and orders in one clean page.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 010 8h-1"></path><path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4z"></path><line x1="6" y1="2" x2="6" y2="5"></line><line x1="10" y1="2" x2="10" y2="5"></line><line x1="14" y1="2" x2="14" y2="5"></line></svg>
+        </div>
+        <h4>Cafés</h4>
+        <p>Highlight your space, menu, and the vibe customers love.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6"></path></svg>
+        </div>
+        <h4>Online sellers</h4>
+        <p>Showcase products properly. Stop relying on Facebook posts.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><path d="M12 22c5.5-2 9-7 9-12V5l-9-3-9 3v5c0 5 3.5 10 9 12z"></path></svg>
+        </div>
+        <h4>Clinics</h4>
+        <p>Build patient trust with a professional medical presence.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+        </div>
+        <h4>Salons</h4>
+        <p>Show services, prices, and booking info beautifully.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"></path><path d="M12 11l8-4M12 11v10M12 11L4 7"></path></svg>
+        </div>
+        <h4>Service businesses</h4>
+        <p>Make it easy for customers to find and contact you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Sample work</span>
+      <h2>Designs that make small businesses look big.</h2>
+      <p>Each website is custom designed for the business it serves. Here is what that looks like for different industries.</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card">
+        <div class="portfolio-mock mock-cafe">
+          <div>
+            <div class="mp-sub">Established 2019</div>
+            <div class="mp-title">Sunday Roast Café</div>
+            <div class="mp-tagline">Slow brewed coffee, quiet mornings, made in Quezon City.</div>
+          </div>
+          <div>
+            <span class="mp-pill">View menu →</span>
+            <div class="mp-grid">
+              <div></div><div></div><div></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="category">Café Website</div>
+          <h4>A café that finally feels like itself online.</h4>
+          <p>Warm photography, menu pricing customers can actually read, and a location map that opens directly in Waze.</p>
+          <span class="mobile-badge">📱 Mobile friendly</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-mock mock-restaurant">
+          <div class="mp-sub">Dine in · Takeout · Delivery</div>
+          <div class="mp-title">Tito Boy&rsquo;s Lutong Bahay</div>
+          <div class="mp-tagline">Filipino comfort food, served every day.</div>
+          <span class="mp-pill">Reserve a table</span>
+          <div class="mp-grid">
+            <div></div><div></div><div></div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="category">Restaurant Website</div>
+          <h4>A menu that travels well on mobile.</h4>
+          <p>Customers see the menu, prices, and contact details without needing to scroll through Facebook posts.</p>
+          <span class="mobile-badge">📱 Mobile friendly</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-mock mock-clinic">
+          <div class="mp-sub">Dental & Orthodontics</div>
+          <div class="mp-title">Brightsmile Dental Clinic</div>
+          <div class="mp-tagline">Gentle, modern dental care in the heart of Pasig.</div>
+          <span class="mp-pill">Book appointment</span>
+          <div class="mp-grid">
+            <div></div><div></div><div></div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="category">Clinic Website</div>
+          <h4>Trust built before the first appointment.</h4>
+          <p>Patient testimonials, service list, and easy booking. Everything a new patient needs to commit to a visit.</p>
+          <span class="mobile-badge">📱 Mobile friendly</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-mock mock-salon">
+          <div class="mp-sub">Hair · Nails · Skin</div>
+          <div class="mp-title">Halo Beauty Studio</div>
+          <div class="mp-tagline">Refined beauty services for women who value their time.</div>
+          <span class="mp-pill">See services</span>
+          <div class="mp-grid">
+            <div></div><div></div><div></div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="category">Salon Website</div>
+          <h4>A salon that looks as beautiful as the work.</h4>
+          <p>Service menu with clear pricing, before and after gallery, and a contact button that opens directly to Messenger.</p>
+          <span class="mobile-badge">📱 Mobile friendly</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-mock mock-store">
+          <div class="mp-sub">Handmade · Made in PH</div>
+          <div class="mp-title">Likha Handmade Goods</div>
+          <div class="mp-tagline">Artisan home pieces, woven by Filipino makers.</div>
+          <span class="mp-pill">Shop collection</span>
+          <div class="mp-grid">
+            <div></div><div></div><div></div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="category">Online Store</div>
+          <h4>A storefront that finally looks like a brand.</h4>
+          <p>Products displayed properly, with prices, shipping info, and a clean inquiry flow that does not bury customers in chat threads.</p>
+          <span class="mobile-badge">📱 Mobile friendly</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="before-after">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The difference is obvious</span>
+      <h2>From Facebook only to fully professional.</h2>
+      <p>Here is what changes when your business has a real website customers can land on.</p>
+    </div>
+
+    <div class="ba-grid">
+      <div class="ba-card ba-before">
+        <span class="ba-label">Before</span>
+        <h3>Just another Facebook page.</h3>
+        <ul class="ba-list">
+          <li><span class="x">✕</span>Customers scroll past months of unrelated posts to find your menu.</li>
+          <li><span class="x">✕</span>Blurry screenshots of prices that change every week.</li>
+          <li><span class="x">✕</span>Difficult inquiries scattered across comments and DMs.</li>
+          <li><span class="x">✕</span>Looks like a small home setup. Customers hesitate to trust you with bigger orders.</li>
+        </ul>
+      </div>
+      <div class="ba-card ba-after">
+        <span class="ba-label">After</span>
+        <h3>A business worth trusting.</h3>
+        <ul class="ba-list">
+          <li><span class="v">✓</span>One clean link customers can save and share.</li>
+          <li><span class="v">✓</span>Easy contact buttons that open Messenger, Viber, or call.</li>
+          <li><span class="v">✓</span>Organized menu, services, and prices that always stay current.</li>
+          <li><span class="v">✓</span>A trusted online presence that turns visitors into customers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Choose your package</span>
+      <h2>Simple, honest pricing.</h2>
+      <p>Pay once. Own everything. No subscriptions, no surprise bills.</p>
+    </div>
+
+    <div class="pkg-grid">
+
+      <div class="pkg-card">
+        <h3>Professional Business Website</h3>
+        <p class="pkg-tag">Everything you need to look professional online.</p>
+        <div class="price">₱12,000</div>
+        <p class="price-note">One-time payment</p>
+        <ul class="pkg-list">
+          <li><span class="check-circle">✓</span>5 page website (Home, About, Services, Contact, plus one custom)</li>
+          <li><span class="check-circle">✓</span>Mobile friendly on every device</li>
+          <li><span class="check-circle">✓</span>Contact form connected to your email</li>
+          <li><span class="check-circle">✓</span>Domain setup included</li>
+          <li><span class="check-circle">✓</span>Google-ready setup (Analytics + Search Console)</li>
+          <li><span class="check-circle">✓</span>Fast loading on mobile data</li>
+          <li><span class="check-circle">✓</span>14 days of support after launch</li>
+        </ul>
+        <a href="https://ig.me/m/tindalytics" class="btn btn-outline" style="width: 100%; justify-content: center;">Start this package <span class="arrow">→</span></a>
+      </div>
+
+      <div class="pkg-card featured">
+        <div class="best-badge">Best Value</div>
+        <h3>Website + Vector Logo</h3>
+        <p class="pkg-tag">Everything in the Professional package, plus a brand identity.</p>
+        <div class="price">₱15,000</div>
+        <p class="price-note">One-time payment</p>
+        <ul class="pkg-list">
+          <li><span class="check-circle">✓</span>Everything in the Professional package</li>
+          <li><span class="check-circle">✓</span>Custom vector logo designed for your business</li>
+          <li><span class="check-circle">✓</span>Brand colors selected for your industry</li>
+          <li><span class="check-circle">✓</span>Social-ready logo files (Facebook, Instagram, TikTok sizes)</li>
+          <li><span class="check-circle">✓</span>Logo files in PNG, SVG, and PDF formats</li>
+        </ul>
+        <a href="https://ig.me/m/tindalytics" class="btn btn-primary">Start this package <span class="arrow">→</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Six simple steps from start to launch.</h2>
+      <p>Organized, transparent, and easy to follow. You always know what is happening and what comes next.</p>
+    </div>
+
+    <div class="process-list">
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-content">
+          <h4>Pay a 50% deposit</h4>
+          <p>Send a 50% deposit via GCash to confirm your slot. The remaining balance is paid only after you approve the final design.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-content">
+          <h4>Submit your intake form</h4>
+          <p>A short form covering your business info, photos, services, and contact details. Everything I need to start building.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <div class="process-content">
+          <h4>Website build phase</h4>
+          <p>I build your website from scratch over the next few days. You receive a private preview link to follow progress.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-num">04</span>
+        <div class="process-content">
+          <h4>Review and revisions</h4>
+          <p>You review the draft and request changes. Two rounds of revisions are included so we get it exactly right.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-num">05</span>
+        <div class="process-content">
+          <h4>Website launch</h4>
+          <p>Your domain is connected, hosting is configured under your own account, and your website goes live.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-num">06</span>
+        <div class="process-content">
+          <h4>Free support period</h4>
+          <p>14 days of free support after launch. Any small fixes, content swaps, or questions are handled at no extra cost.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why business owners choose this</span>
+      <h2>Everything is set up properly from day one.</h2>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        </div>
+        <div>
+          <h4>Mobile friendly</h4>
+          <p>Looks beautiful on phones, tablets, and desktops.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 13 10 19 10"></polyline><polyline points="11 22 11 14 5 14"></polyline></svg>
+        </div>
+        <div>
+          <h4>Fast loading</h4>
+          <p>Optimized to load quickly even on slow mobile data.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg>
+        </div>
+        <div>
+          <h4>You own the website</h4>
+          <p>Hosted under your account. Yours forever, no lock-in.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+        </div>
+        <div>
+          <h4>No coding knowledge needed</h4>
+          <p>I handle the technical setup. You focus on your business.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
+        <div>
+          <h4>Google-ready setup</h4>
+          <p>Analytics and Search Console connected so you can grow.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+        </div>
+        <div>
+          <h4>Free support included</h4>
+          <p>14 days of post-launch support for any small adjustments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Common questions</span>
+      <h2>Things business owners always ask.</h2>
+      <p>Honest answers, no fine print.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>
+          Magkano lahat? May hidden fees ba?
+          <span class="faq-toggle">+</span>
+        </summary>
+        <div class="faq-answer">
+          The package price you see is the total cost of building your website. There are no hidden fees. The only ongoing cost is your domain renewal, which is around ₱600 a year, paid directly to your domain provider, never to me. Hosting is free under your own GitHub or Netlify account, which I set up for you during the build.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Paano kung hindi ko gusto ang output?
+          <span class="faq-toggle">+</span>
+        </summary>
+        <div class="faq-answer">
+          Two rounds of revisions are included with every package. After the first draft, you can request changes to the layout, colors, copy, or anything else. We refine it until you are happy. The remaining 50% balance is only paid after you approve the final design, so you are never locked into something you do not love.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Kailangan ko bang marunong sa tech?
+          <span class="faq-toggle">+</span>
+        </summary>
+        <div class="faq-answer">
+          Not at all. The whole point of this service is that you do not need to learn anything technical. I handle the domain, hosting, design, build, and Google setup. You give me your business info and photos, and you receive a finished website. If you ever want to update something small, I will show you exactly how, or do it for you during your support period.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          What if I want to edit the website myself someday?
+          <span class="faq-toggle">+</span>
+        </summary>
+        <div class="faq-answer">
+          You can. Because the website is hosted under your own account and built on simple HTML, you have full access to make changes. I can also walk you through how to edit specific sections like menu prices, opening hours, or contact details. Many clients prefer to message me for small edits during the support period instead, which is also fine.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Paano ako babayad?
+          <span class="faq-toggle">+</span>
+        </summary>
+        <div class="faq-answer">
+          Payment is via GCash. A 50% deposit confirms your slot and starts the project. The remaining 50% is paid only after you approve the final design, right before we launch. This protects both of us. You only finish paying once you are happy with the result.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          How many websites do you take at a time?
+          <span class="faq-toggle">+</span>
+        </summary>
+        <div class="faq-answer">
+          I only take on two to three website projects at a time so that each client gets focused attention and the 7 day turnaround can actually be met. If a slot is not available right away, I will tell you honestly and let you know when the next one opens.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Ready to make your business <em>look more professional</em> online?</h2>
+    <p>I only take a few website projects at a time to keep quality high.</p>
+    <a href="https://ig.me/m/tindalytics" class="btn btn-light">
+      Message me to start
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <a href="#" class="logo"><img src="logo-white.png" alt="Tindalytics"></a>
+    <p>Smarter tools and websites for Filipino businesses.</p>
+    <p style="margin-top: 14px; font-size: 0.78rem;">© 2026 Tindalytics. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
