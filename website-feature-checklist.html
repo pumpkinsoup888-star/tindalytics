@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Feature Checklist</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1a17;
+    --paper:#f7f4ee;
+    --card:#fffdf8;
+    --line:#e4ded2;
+    --accent:#c8552b;
+    --accent-soft:#f4ddd1;
+    --check:#2f7d52;
+    --muted:#7a7468;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito',sans-serif;font-weight:600;background:var(--paper);color:var(--ink);line-height:1.5}
+  h1,h2,h3{font-family:'Fraunces',serif}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:48px 22px 90px}
+  header.top{margin-bottom:30px}
+  header.top .eyebrow{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:800}
+  header.top h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:600;margin:6px 0 10px;line-height:1.05}
+  header.top p{color:var(--muted);max-width:580px;font-size:1.05rem}
+
+  .layout{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+  @media(max-width:880px){.layout{grid-template-columns:1fr}}
+
+  .group{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-bottom:18px;
+    box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .group h2{font-size:1.25rem;font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .group .gicon{width:30px;height:30px;flex:none;display:grid;place-items:center;background:var(--accent-soft);
+    border-radius:8px;font-size:1rem}
+  .group .ghint{color:var(--muted);font-size:.92rem;margin:0 0 14px 40px}
+
+  .section-label{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;margin:8px 0 14px;display:flex;
+    align-items:center;gap:10px}
+  .section-label.addon{margin-top:34px}
+  .section-label .tag{font-family:'Nunito';font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:20px;letter-spacing:.4px}
+  .tag-inc{background:#dff0e4;color:#2f7d52;border:1px solid #b6dcc2}
+  .tag-add{background:#fbe6cf;color:#b06a1f;border:1px solid #f0cf9a}
+
+  label.item{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border-radius:10px;cursor:pointer;
+    transition:background .12s}
+  label.item:hover{background:var(--paper)}
+  label.item input{appearance:none;width:22px;height:22px;flex:none;border:2px solid var(--line);border-radius:6px;
+    margin-top:1px;cursor:pointer;position:relative;transition:.15s}
+  label.item input:checked{background:var(--check);border-color:var(--check)}
+  label.item input:checked::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;
+    border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+  label.item .txt strong{display:block;font-weight:800;font-size:.98rem}
+  label.item .txt span{color:var(--muted);font-size:.86rem;font-weight:600}
+  label.item .txt .paid{display:inline-block;margin-top:4px;font-size:.72rem;font-weight:800;color:#b06a1f;
+    background:#fbe6cf;border:1px solid #f0cf9a;padding:2px 8px;border-radius:20px;letter-spacing:.3px}
+
+  .heads-up{background:#fbe6cf;border:1px solid #f0cf9a;border-radius:12px;padding:14px 18px;margin-bottom:24px;
+    font-size:.92rem;color:#7a5418;display:flex;gap:10px;align-items:flex-start}
+  .heads-up b{color:#5e3f10}
+
+  .intake-card{background:var(--card);border:2px solid var(--accent);border-radius:16px;padding:24px;margin-bottom:26px;
+    box-shadow:0 4px 14px rgba(200,85,43,.1)}
+  .intake-title{font-size:1.4rem;font-weight:600;color:var(--ink);margin-bottom:18px}
+  .intake-sub{color:var(--muted);font-size:.95rem;margin:4px 0 18px}
+  .intake-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:600px){.intake-grid{grid-template-columns:1fr}}
+  .intake-grid .field{display:flex;flex-direction:column}
+  .intake-grid label{font-size:.85rem;font-weight:800;color:var(--ink);margin-bottom:6px}
+  .intake-grid .req{color:var(--accent)}
+  .intake-grid input{padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:#fff;
+    font-family:'Nunito';font-weight:600;font-size:.95rem;color:var(--ink)}
+  .intake-grid input:focus{outline:none;border-color:var(--accent)}
+  .intake-grid input::placeholder{color:#b5ac9d}
+
+  .summary{position:sticky;top:22px;background:var(--ink);color:#f2ede3;border-radius:16px;padding:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.18)}
+  .summary h3{color:#fff;font-size:1.3rem;font-weight:600;margin-bottom:4px}
+  .summary .count{color:#b8b0a2;font-size:.9rem;margin-bottom:16px}
+  .biz-label{display:block;color:#cfc7b8;font-size:.8rem;font-weight:700;margin:4px 0 6px}
+  .biz-input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.07);color:#fff;font-family:'Nunito';font-weight:600;font-size:.9rem;margin-bottom:14px}
+  .biz-input::placeholder{color:#8a8276}
+  .biz-input:focus{outline:none;border-color:#e8a37f}
+  .summary .pick-list{list-style:none;max-height:300px;overflow-y:auto;margin-bottom:18px}
+  .summary .pick-list li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem;display:flex;gap:8px}
+  .summary .pick-list li::before{content:"✓";color:#7cd6a0;font-weight:800}
+  .summary .empty{color:#8a8276;font-style:italic;font-size:.9rem;padding:8px 0}
+  .summary .cat{color:#e8a37f;font-weight:800;font-size:.75rem;letter-spacing:1px;text-transform:uppercase;
+    padding:12px 0 2px;border:none}
+  .summary .cat::before{content:""}
+  .btn{display:block;width:100%;text-align:center;font-family:'Nunito';font-weight:800;font-size:.95rem;
+    padding:13px;border-radius:10px;border:none;cursor:pointer;margin-top:8px;transition:.12s}
+  .btn-main{background:var(--accent);color:#fff}
+  .btn-main:hover{filter:brightness(1.07)}
+  .btn-email{background:#2f7d52;color:#fff}
+  .btn-email:hover{filter:brightness(1.08)}
+  .btn-subject{background:#3f6e8c;color:#fff}
+  .btn-subject:hover{filter:brightness(1.1)}
+  .btn-ghost{background:transparent;color:#cfc7b8;border:1px solid rgba(255,255,255,.2)}
+  .btn-ghost:hover{background:rgba(255,255,255,.06)}
+  .copied{text-align:center;color:#7cd6a0;font-size:.85rem;height:16px;margin-top:8px;font-weight:700}
+
+  .send-steps{margin-top:18px;padding:14px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:10px;font-size:.85rem;color:#cfc7b8}
+  .send-steps strong{display:block;color:#fff;margin-bottom:8px;font-size:.9rem}
+  .send-steps ol{margin:0;padding-left:18px;line-height:1.7}
+  .send-steps b{color:#e8a37f}
+  .missing-warn{background:rgba(232,163,127,.15);border:1px solid rgba(232,163,127,.4);color:#f0c9b2;
+    border-radius:8px;padding:8px 10px;font-size:.8rem;font-weight:700;margin-bottom:10px;line-height:1.4}
+
+  .note{color:var(--muted);font-size:.85rem;margin-top:26px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Project Intake</div>
+    <h1>Website Feature Checklist</h1>
+    <p>Tick everything you'd like on your website. A summary builds on the right that you can copy and send back to me. Not sure about something? Tick it anyway and we'll talk it through.</p>
+  </header>
+
+  <div class="heads-up">
+    <span>💡</span>
+    <div>The <b>Included</b> features come standard with your website package at no extra cost. The <b>Optional Add-ons</b> use outside services or extra build time, so they're quoted separately. We'll go over anything you pick together before we finalize the price.</div>
+  </div>
+
+  <div class="intake-card">
+    <h2 class="intake-title">Step 1: Tell me about you</h2>
+    <div class="intake-grid">
+      <div class="field">
+        <label for="bizName">Business name <span class="req">*</span></label>
+        <input type="text" id="bizName" placeholder="e.g. GoUp Clinic" oninput="render()">
+      </div>
+      <div class="field">
+        <label for="contactName">Your name <span class="req">*</span></label>
+        <input type="text" id="contactName" placeholder="e.g. Maria Santos" oninput="render()">
+      </div>
+      <div class="field">
+        <label for="designation">Your role</label>
+        <input type="text" id="designation" placeholder="e.g. Owner, Manager" oninput="render()">
+      </div>
+      <div class="field">
+        <label for="contactNumber">Contact number <span class="req">*</span></label>
+        <input type="text" id="contactNumber" placeholder="e.g. 0917 123 4567" oninput="render()">
+      </div>
+    </div>
+  </div>
+
+  <h2 class="intake-title" style="margin:0 0 14px">Step 2: Pick your features</h2>
+
+  <div class="layout">
+    <div id="groups"></div>
+
+    <aside class="summary">
+      <h3>Your Selections</h3>
+      <div class="count" id="count">Nothing selected yet</div>
+      <ul class="pick-list" id="picks"><li class="empty">Start ticking features →</li></ul>
+      <button class="btn btn-email" onclick="copyEmail()">① Copy Email Address</button>
+      <button class="btn btn-subject" onclick="copySubject()">② Copy Subject Line</button>
+      <button class="btn btn-main" onclick="copySummary()">③ Copy My Selections</button>
+      <button class="btn btn-ghost" onclick="clearAll()">Clear all</button>
+      <div class="copied" id="copied"></div>
+      <div class="send-steps" id="sendSteps">
+        <strong>How to send it to me:</strong>
+        <ol>
+          <li>Open your email app and start a <b>new email</b></li>
+          <li>Tap <b>① Copy Email Address</b>, paste it in the <b>To</b> field</li>
+          <li>Tap <b>② Copy Subject Line</b>, paste it in the <b>Subject</b> field</li>
+          <li>Tap <b>③ Copy My Selections</b>, paste it in the <b>message body</b></li>
+          <li>Hit send 🎉</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+
+  <p class="note">No selection is binding. This just maps out what you want before we finalize your package.</p>
+</div>
+
+<script>
+// ── CHANGE THIS to your own email address ──
+const MY_EMAIL = "hello@tindalytics.com";
+
+// section: "inc" = included in package, "add" = paid add-on
+const DATA = [
+  {section:"inc", cat:"Your Pages", icon:"🏠", hint:"The core pages of your site.", items:[
+    ["Homepage","The main page visitors land on first"],
+    ["About page","Your story and what makes you different"],
+    ["Services or products page","What you offer, laid out clearly"],
+    ["Contact page","Ways to reach you, with a contact form"],
+    ["Mobile-friendly design","Looks great on phones and tablets"],
+  ]},
+  {section:"inc", cat:"Getting in Touch", icon:"✉️", hint:"Simple ways for visitors to reach you.", items:[
+    ["Contact form","Visitors send you a message from the site"],
+    ["Click-to-call phone button","Tap to dial on mobile"],
+    ["Messenger / WhatsApp button","One tap to chat with you"],
+    ["Order / delivery link button","Sends them to GrabFood, Shopee, etc."],
+  ]},
+  {section:"inc", cat:"Show Off Your Work", icon:"🖼️", hint:"Make your business look real and trusted.", items:[
+    ["Photo gallery","A grid or slideshow of your images"],
+    ["Menu or catalog","Food menu, service list, or product list"],
+    ["Pricing or packages table","Show what you offer and what's included"],
+    ["Customer reviews / testimonials","Quotes from happy clients"],
+    ["Video embed","A YouTube or Reel clip on your page"],
+  ]},
+  {section:"inc", cat:"Location & Trust", icon:"📍", hint:"Helpful if customers visit or need to trust you fast.", items:[
+    ["Google Maps location","An interactive map of where you are"],
+    ["Opening hours","When you're open"],
+    ["FAQ section","Answer common questions upfront"],
+    ["Social media links","Link to your IG, FB, TikTok"],
+  ]},
+  {section:"inc", cat:"Behind the Scenes", icon:"⚙️", hint:"Quiet basics that come standard.", items:[
+    ["Google-ready setup (SEO basics)","Helps you show up on Google"],
+    ["Visitor tracking","See how many people visit your site"],
+    ["Nice link preview when shared","Looks good when posted on Messenger/IG"],
+  ]},
+
+  {section:"add", cat:"Selling Online", icon:"🛒", hint:"Anything that takes payments needs an outside service.", items:[
+    ["Online store with cart","Browse, add to cart, check out", true],
+    ["Online payment (card, GCash, PayPal)","Accept payments on the site", true],
+    ["Discount codes / promos","Coupon support", true],
+  ]},
+  {section:"add", cat:"Bookings & Email", icon:"📅", hint:"Tools that run on a monthly subscription.", items:[
+    ["Booking / appointment scheduler","Let people reserve a time slot", true],
+    ["Email newsletter signup","Collect emails to stay in touch", true],
+    ["Automatic follow-up emails","Emails that send on their own", true],
+  ]},
+];
+
+const groupsEl = document.getElementById('groups');
+
+function renderSection(sectionKey, labelText, tagClass, tagText){
+  const label = document.createElement('div');
+  label.className = 'section-label' + (sectionKey==='add' ? ' addon' : '');
+  label.innerHTML = `${labelText} <span class="tag ${tagClass}">${tagText}</span>`;
+  groupsEl.appendChild(label);
+
+  DATA.filter(g => g.section === sectionKey).forEach(g => {
+    const div = document.createElement('div');
+    div.className = 'group';
+    div.innerHTML = `<h2><span class="gicon">${g.icon}</span>${g.cat}</h2><p class="ghint">${g.hint}</p>` +
+      g.items.map(it => `
+        <label class="item">
+          <input type="checkbox" data-cat="${g.cat}" data-label="${it[0]}" data-paid="${it[2]?1:0}" onchange="render()">
+          <span class="txt"><strong>${it[0]}</strong><span>${it[1]}</span>${it[2]?'<span class="paid">⚡ extra cost</span>':''}</span>
+        </label>`).join('');
+    groupsEl.appendChild(div);
+  });
+}
+
+renderSection('inc', 'Included in Your Package', 'tag-inc', '✓ no extra cost');
+renderSection('add', 'Optional Add-ons', 'tag-add', '⚡ quoted separately');
+
+function getChecked(){
+  return [...document.querySelectorAll('input:checked')].map(i => ({
+    cat: i.dataset.cat, label: i.dataset.label, paid: i.dataset.paid==='1'
+  }));
+}
+function render(){
+  const picks = getChecked();
+  const countEl = document.getElementById('count');
+  const list = document.getElementById('picks');
+  const missing = [];
+  if(!fieldVal('bizName')) missing.push('business name');
+  if(!fieldVal('contactName')) missing.push('your name');
+  if(!fieldVal('contactNumber')) missing.push('contact number');
+  let warn = '';
+  if(missing.length){
+    warn = `<div class="missing-warn">⚠ Don't forget to fill in your ${missing.join(', ')} up top.</div>`;
+  }
+  if(!picks.length){
+    countEl.innerHTML = warn + 'Nothing selected yet';
+    list.innerHTML = '<li class="empty">Start ticking features →</li>';
+    return;
+  }
+  countEl.innerHTML = warn + `${picks.length} feature${picks.length>1?'s':''} selected`;
+  const byCat = {};
+  picks.forEach(p => { (byCat[p.cat] = byCat[p.cat] || []).push(p); });
+  let html = '';
+  Object.keys(byCat).forEach(cat => {
+    html += `<li class="cat">${cat}</li>`;
+    byCat[cat].forEach(p => { html += `<li>${p.label}${p.paid?' <em style="color:#e8a37f;font-style:normal">⚡</em>':''}</li>`; });
+  });
+  list.innerHTML = html;
+}
+function fieldVal(id){ return (document.getElementById(id).value || '').trim(); }
+function bizName(){
+  return fieldVal('bizName') || '[your business name]';
+}
+function subjectText(){
+  return 'Website Inquiry - ' + bizName();
+}
+function summaryText(){
+  const picks = getChecked();
+  const inc = picks.filter(p=>!p.paid);
+  const add = picks.filter(p=>p.paid);
+  const name = fieldVal('contactName') || '[your name]';
+  const role = fieldVal('designation');
+  const num = fieldVal('contactNumber') || '[your contact number]';
+  let t = 'YOUR DETAILS\n========================\n';
+  t += 'Business: ' + bizName() + '\n';
+  t += 'Contact person: ' + name + (role ? ' (' + role + ')' : '') + '\n';
+  t += 'Contact number: ' + num + '\n\n';
+  if(!picks.length){
+    t += 'No features selected yet.';
+    return t;
+  }
+  t += 'FEATURES REQUESTED\n========================\n';
+  if(inc.length){
+    t += 'INCLUDED IN PACKAGE\n';
+    inc.forEach(p => { t += '  - ' + p.label + '\n'; });
+    t += '\n';
+  }
+  if(add.length){
+    t += 'OPTIONAL ADD-ONS (extra cost)\n';
+    add.forEach(p => { t += '  - ' + p.label + '\n'; });
+    t += '\n';
+  }
+  t += `Total: ${picks.length} feature${picks.length>1?'s':''} selected.`;
+  if(add.length){
+    t += '\n\nNote: Add-ons rely on outside services that may need a paid\nsubscription (payments, booking, email). To be quoted separately.';
+  }
+  return t;
+}
+function copySubject(){
+  const text = subjectText();
+  const done = () => { const c=document.getElementById('copied'); c.textContent='Subject copied! Paste in the Subject field.'; setTimeout(()=>c.textContent='',3000); };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(()=>fallbackCopy(text,done));
+  } else { fallbackCopy(text, done); }
+}
+function copyEmail(){
+  const done = () => {
+    const c=document.getElementById('copied');
+    c.textContent='Email copied! '+MY_EMAIL;
+    setTimeout(()=>c.textContent='',3000);
+  };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(MY_EMAIL).then(done).catch(()=>fallbackCopy(MY_EMAIL,done));
+  } else { fallbackCopy(MY_EMAIL, done); }
+}
+function copySummary(){
+  const text = summaryText();
+  const done = () => { const c=document.getElementById('copied'); c.textContent='Selections copied! Paste in the message body.'; setTimeout(()=>c.textContent='',3000); };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(()=>fallbackCopy(text,done));
+  } else { fallbackCopy(text, done); }
+}
+function fallbackCopy(text, done){
+  const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+  ta.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta); done();
+}
+function clearAll(){
+  document.querySelectorAll('input:checked').forEach(i=>i.checked=false);
+  ['bizName','contactName','designation','contactNumber'].forEach(id=>document.getElementById(id).value='');
+  render();
+}
+render();
+</script>
+</body>
+</html>
