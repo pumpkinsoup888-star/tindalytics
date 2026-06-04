@@ -7,14 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1c1a17;
-    --paper:#f7f4ee;
-    --card:#fffdf8;
-    --line:#e4ded2;
-    --accent:#c8552b;
-    --accent-soft:#f4ddd1;
-    --check:#2f7d52;
-    --muted:#7a7468;
+    --ink:#13233b;
+    --paper:#f4f6f9;
+    --card:#ffffff;
+    --line:#dce3ec;
+    --accent:#1f3a5f;
+    --accent-soft:#e3e9f2;
+    --gold:#c79a3a;
+    --gold-soft:#f3e8cf;
+    --check:#1f7a52;
+    --muted:#6b7787;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Nunito',sans-serif;font-weight:600;background:var(--paper);color:var(--ink);line-height:1.5}
@@ -41,7 +43,7 @@
   .section-label.addon{margin-top:34px}
   .section-label .tag{font-family:'Nunito';font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:20px;letter-spacing:.4px}
   .tag-inc{background:#dff0e4;color:#2f7d52;border:1px solid #b6dcc2}
-  .tag-add{background:#fbe6cf;color:#b06a1f;border:1px solid #f0cf9a}
+  .tag-add{background:var(--gold-soft);color:#8a6716;border:1px solid #e0c685}
 
   label.item{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border-radius:10px;cursor:pointer;
     transition:background .12s}
@@ -53,12 +55,12 @@
     border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
   label.item .txt strong{display:block;font-weight:800;font-size:.98rem}
   label.item .txt span{color:var(--muted);font-size:.86rem;font-weight:600}
-  label.item .txt .paid{display:inline-block;margin-top:4px;font-size:.72rem;font-weight:800;color:#b06a1f;
-    background:#fbe6cf;border:1px solid #f0cf9a;padding:2px 8px;border-radius:20px;letter-spacing:.3px}
+  label.item .txt .paid{display:inline-block;margin-top:4px;font-size:.72rem;font-weight:800;color:#8a6716;
+    background:var(--gold-soft);border:1px solid #e0c685;padding:2px 8px;border-radius:20px;letter-spacing:.3px}
 
-  .heads-up{background:#fbe6cf;border:1px solid #f0cf9a;border-radius:12px;padding:14px 18px;margin-bottom:24px;
-    font-size:.92rem;color:#7a5418;display:flex;gap:10px;align-items:flex-start}
-  .heads-up b{color:#5e3f10}
+  .heads-up{background:var(--gold-soft);border:1px solid #e0c685;border-radius:12px;padding:14px 18px;margin-bottom:24px;
+    font-size:.92rem;color:#7a5d1a;display:flex;gap:10px;align-items:flex-start}
+  .heads-up b{color:#5e470f}
 
   .intake-card{background:var(--card);border:2px solid var(--accent);border-radius:16px;padding:24px;margin-bottom:26px;
     box-shadow:0 4px 14px rgba(200,85,43,.1)}
@@ -82,21 +84,21 @@
   .biz-input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.18);
     background:rgba(255,255,255,.07);color:#fff;font-family:'Nunito';font-weight:600;font-size:.9rem;margin-bottom:14px}
   .biz-input::placeholder{color:#8a8276}
-  .biz-input:focus{outline:none;border-color:#e8a37f}
+  .biz-input:focus{outline:none;border-color:var(--gold)}
   .summary .pick-list{list-style:none;max-height:300px;overflow-y:auto;margin-bottom:18px}
   .summary .pick-list li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem;display:flex;gap:8px}
   .summary .pick-list li::before{content:"✓";color:#7cd6a0;font-weight:800}
   .summary .empty{color:#8a8276;font-style:italic;font-size:.9rem;padding:8px 0}
-  .summary .cat{color:#e8a37f;font-weight:800;font-size:.75rem;letter-spacing:1px;text-transform:uppercase;
+  .summary .cat{color:#dcb863;font-weight:800;font-size:.75rem;letter-spacing:1px;text-transform:uppercase;
     padding:12px 0 2px;border:none}
   .summary .cat::before{content:""}
   .btn{display:block;width:100%;text-align:center;font-family:'Nunito';font-weight:800;font-size:.95rem;
     padding:13px;border-radius:10px;border:none;cursor:pointer;margin-top:8px;transition:.12s}
-  .btn-main{background:var(--accent);color:#fff}
+  .btn-main{background:var(--gold);color:#1c1404}
   .btn-main:hover{filter:brightness(1.07)}
   .btn-email{background:#2f7d52;color:#fff}
   .btn-email:hover{filter:brightness(1.08)}
-  .btn-subject{background:#3f6e8c;color:#fff}
+  .btn-subject{background:#3d6e94;color:#fff}
   .btn-subject:hover{filter:brightness(1.1)}
   .btn-ghost{background:transparent;color:#cfc7b8;border:1px solid rgba(255,255,255,.2)}
   .btn-ghost:hover{background:rgba(255,255,255,.06)}
@@ -106,11 +108,20 @@
     border-radius:10px;font-size:.85rem;color:#cfc7b8}
   .send-steps strong{display:block;color:#fff;margin-bottom:8px;font-size:.9rem}
   .send-steps ol{margin:0;padding-left:18px;line-height:1.7}
-  .send-steps b{color:#e8a37f}
+  .send-steps b{color:#dcb863}
   .missing-warn{background:rgba(232,163,127,.15);border:1px solid rgba(232,163,127,.4);color:#f0c9b2;
     border-radius:8px;padding:8px 10px;font-size:.8rem;font-weight:700;margin-bottom:10px;line-height:1.4}
 
   .note{color:var(--muted);font-size:.85rem;margin-top:26px;text-align:center}
+
+  .vision-card{background:var(--card);border:2px solid var(--accent);border-radius:16px;padding:24px;margin:8px 0 18px;
+    box-shadow:0 4px 14px rgba(200,85,43,.1)}
+  .vision-card .intake-title{margin-bottom:6px}
+  .vision-card .vision-sub{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+  .vision-card textarea{width:100%;min-height:140px;padding:14px 15px;border:1px solid var(--line);border-radius:10px;
+    background:#fff;font-family:'Nunito';font-weight:600;font-size:.97rem;color:var(--ink);line-height:1.6;resize:vertical}
+  .vision-card textarea:focus{outline:none;border-color:var(--accent)}
+  .vision-card textarea::placeholder{color:#b5ac9d}
 </style>
 </head>
 <body>
@@ -118,7 +129,7 @@
   <header class="top">
     <div class="eyebrow">Project Intake</div>
     <h1>Website Feature Checklist</h1>
-    <p>Tick everything you'd like on your website. A summary builds on the right that you can copy and send back to me. Not sure about something? Tick it anyway and we'll talk it through.</p>
+    <p>Tick everything you'd like on your website. A summary builds as you go that you can copy and send back to me. Not sure about something? Tick it anyway and we'll talk it through.</p>
   </header>
 
   <div class="heads-up">
@@ -252,6 +263,16 @@ function renderSection(sectionKey, labelText, tagClass, tagText){
 renderSection('inc', 'Included in Your Package', 'tag-inc', '✓ no extra cost');
 renderSection('add', 'Optional Add-ons', 'tag-add', '⚡ quoted separately');
 
+(function addVisionBox(){
+  const card = document.createElement('div');
+  card.className = 'vision-card';
+  card.innerHTML = `
+    <h2 class="intake-title">Your vision (optional)</h2>
+    <p class="vision-sub">Write here what you imagined for your website. Colors you like, sites you admire, the feeling you want it to have, anything special you have in mind. The more you share, the closer I can build it to what's in your head.</p>
+    <textarea id="visionNotes" placeholder="e.g. I want it to feel warm and cozy, mostly green and cream colors. I love how [some site] looks. I'd like a section where customers can see our daily specials..." oninput="render()"></textarea>`;
+  groupsEl.appendChild(card);
+})();
+
 function getChecked(){
   return [...document.querySelectorAll('input:checked')].map(i => ({
     cat: i.dataset.cat, label: i.dataset.label, paid: i.dataset.paid==='1'
@@ -280,7 +301,7 @@ function render(){
   let html = '';
   Object.keys(byCat).forEach(cat => {
     html += `<li class="cat">${cat}</li>`;
-    byCat[cat].forEach(p => { html += `<li>${p.label}${p.paid?' <em style="color:#e8a37f;font-style:normal">⚡</em>':''}</li>`; });
+    byCat[cat].forEach(p => { html += `<li>${p.label}${p.paid?' <em style="color:#dcb863;font-style:normal">⚡</em>':''}</li>`; });
   });
   list.innerHTML = html;
 }
@@ -304,6 +325,10 @@ function summaryText(){
   t += 'Contact number: ' + num + '\n\n';
   if(!picks.length){
     t += 'No features selected yet.';
+    const v0 = fieldVal('visionNotes');
+    if(v0){
+      t += '\n\nWHAT I IMAGINED FOR MY WEBSITE\n========================\n' + v0;
+    }
     return t;
   }
   t += 'FEATURES REQUESTED\n========================\n';
@@ -320,6 +345,10 @@ function summaryText(){
   t += `Total: ${picks.length} feature${picks.length>1?'s':''} selected.`;
   if(add.length){
     t += '\n\nNote: Add-ons rely on outside services that may need a paid\nsubscription (payments, booking, email). To be quoted separately.';
+  }
+  const vision = fieldVal('visionNotes');
+  if(vision){
+    t += '\n\nWHAT I IMAGINED FOR MY WEBSITE\n========================\n' + vision;
   }
   return t;
 }
@@ -353,7 +382,7 @@ function fallbackCopy(text, done){
 }
 function clearAll(){
   document.querySelectorAll('input:checked').forEach(i=>i.checked=false);
-  ['bizName','contactName','designation','contactNumber'].forEach(id=>document.getElementById(id).value='');
+  ['bizName','contactName','designation','contactNumber','visionNotes'].forEach(id=>document.getElementById(id).value='');
   render();
 }
 render();
