@@ -4,36 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tindalytics | Professional Websites for Filipino Small Businesses</title>
-<meta name="description" content="Make your business look trusted online in 7 days. One-time payment. No monthly fees. Made for Filipino small business owners.">
+<meta name="description" content="A Facebook page makes even a great business look small. Get one professional website that earns trust, ready in 7 days. One-time payment, free hosting, you own it.">
 <meta property="og:title" content="Tindalytics | Professional Websites for Filipino Small Businesses">
-<meta property="og:description" content="Stop sending messy screenshots. Give customers one professional link. One-time payment, no monthly fees.">
+<meta property="og:description" content="Stop losing customers who cannot tell if you are legit. Get a professional website in 7 days. See a free sample first, before you pay anything.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --navy: #0A1628;
-  --navy-2: #14233D;
-  --navy-3: #1B2E4D;
-  --blue: #017BFD;
-  --blue-soft: #4A9DFF;
-  --cream: #FAFAF7;
-  --cream-2: #F4F2EC;
-  --line: #E8E4DA;
-  --ink: #0A1628;
+  --navy: #0E1A2B;
+  --navy-2: #16243A;
+  --navy-3: #1E2F49;
+  --blue: #1B6FF0;
+  --blue-soft: #5A97F5;
+  --cream: #FBF9F4;
+  --cream-2: #F1F0EA;
+  --line: #E3E2DA;
+  --ink: #0E1A2B;
   --ink-soft: #4A5468;
   --ink-mute: #7A8499;
   --success: #2D7A4F;
   --warn: #C84B3A;
-  --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.06);
-  --shadow-md: 0 10px 30px rgba(10, 22, 40, 0.08);
-  --shadow-lg: 0 24px 60px rgba(10, 22, 40, 0.12);
+  --shadow-sm: 0 1px 2px rgba(14, 26, 43, 0.06);
+  --shadow-md: 0 10px 30px rgba(14, 26, 43, 0.08);
+  --shadow-lg: 0 24px 60px rgba(14, 26, 43, 0.12);
   --radius: 14px;
   --radius-lg: 22px;
-  --serif: 'Fraunces', Georgia, serif;
+  --serif: 'Sora', -apple-system, sans-serif;
   --sans: 'DM Sans', -apple-system, sans-serif;
 }
 
@@ -63,22 +63,20 @@ a { color: inherit; text-decoration: none; }
 /* TYPOGRAPHY */
 h1, h2, h3, h4 {
   font-family: var(--serif);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.08;
   color: var(--ink);
 }
 h1 {
   font-size: clamp(2.2rem, 6.5vw, 4.4rem);
-  font-variation-settings: 'opsz' 144, 'SOFT' 30;
+  font-weight: 700;
 }
 h2 {
   font-size: clamp(1.8rem, 4.5vw, 3rem);
-  font-variation-settings: 'opsz' 100, 'SOFT' 20;
 }
 h3 {
   font-size: clamp(1.25rem, 2.5vw, 1.55rem);
-  font-variation-settings: 'opsz' 60;
 }
 p { color: var(--ink-soft); font-size: clamp(1rem, 1.4vw, 1.1rem); }
 
@@ -186,8 +184,8 @@ nav {
 .hero h1 { margin-bottom: 24px; }
 .hero h1 em {
   font-style: italic;
+  font-weight: 700;
   color: var(--blue);
-  font-variation-settings: 'opsz' 144, 'SOFT' 50;
 }
 .hero-sub {
   font-size: clamp(1.05rem, 1.6vw, 1.22rem);
@@ -195,6 +193,23 @@ nav {
   max-width: 520px;
   margin-bottom: 36px;
 }
+.hero-offer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+.hero-offer-price {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--navy);
+}
+.hero-offer-dot { color: var(--line); }
 .hero-cta-row {
   display: flex;
   flex-wrap: wrap;
@@ -275,7 +290,7 @@ nav {
 .hero-mockup-body {
   padding: 22px;
   background: linear-gradient(180deg, #FFFFFF 0%, #FAFAF7 100%);
-  aspect-ratio: 16/11;
+  min-height: 380px;
 }
 .mock-nav {
   display: flex;
@@ -307,14 +322,12 @@ nav {
   margin-bottom: 8px;
   max-width: 85%;
 }
-.mock-hero-sub {
-  height: 8px;
-  background: var(--line);
-  border-radius: 4px;
-  max-width: 70%;
-  margin-bottom: 6px;
+.mock-hero-text {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+  max-width: 80%;
 }
-.mock-hero-sub:nth-of-type(2) { max-width: 50%; margin-bottom: 18px; }
 .mock-cta {
   display: inline-block;
   padding: 8px 16px;
@@ -324,34 +337,31 @@ nav {
   border-radius: 999px;
   font-weight: 600;
 }
-.mock-cards {
+.mock-services {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 8px;
   margin-top: 22px;
 }
-.mock-card {
-  background: var(--cream-2);
-  border-radius: 8px;
-  padding: 12px 10px;
-  aspect-ratio: 1/1.1;
+.mock-service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
 }
-.mock-card-img {
-  width: 100%;
-  aspect-ratio: 1.5/1;
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-soft) 100%);
-  border-radius: 4px;
-  margin-bottom: 8px;
+.mock-service-name {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
 }
-.mock-card:nth-child(2) .mock-card-img { background: linear-gradient(135deg, #E8A87C 0%, #C38D9E 100%); }
-.mock-card:nth-child(3) .mock-card-img { background: linear-gradient(135deg, #41B3A3 0%, #85DCBA 100%); }
-.mock-card-line {
-  height: 5px;
-  background: var(--line);
-  border-radius: 3px;
-  margin-bottom: 4px;
+.mock-service-price {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue);
 }
-.mock-card-line.short { width: 60%; }
 
 .floating-badge {
   position: absolute;
@@ -378,7 +388,7 @@ nav {
   font-size: 1rem;
 }
 .fb-1 { top: 20px; right: -10px; }
-.fb-2 { bottom: 30px; left: -16px; }
+.fb-2 { bottom: -18px; left: -10px; }
 
 /* SECTION COMMON */
 section {
@@ -408,7 +418,7 @@ section {
   right: -10%;
   width: 50%;
   height: 200%;
-  background: radial-gradient(ellipse, rgba(1, 123, 253, 0.18) 0%, transparent 65%);
+  background: radial-gradient(ellipse, rgba(27, 111, 240, 0.14) 0%, transparent 65%);
   pointer-events: none;
 }
 .no-fees h2 { color: var(--cream); }
@@ -447,7 +457,6 @@ section {
 .fees-headline em {
   font-style: italic;
   color: var(--blue-soft);
-  font-variation-settings: 'opsz' 144, 'SOFT' 50;
 }
 .fees-list {
   list-style: none;
@@ -472,6 +481,62 @@ section {
 .fees-list li strong {
   font-weight: 600;
   color: var(--cream);
+}
+
+/* RISK REVERSAL */
+.risk {
+  background: var(--cream-2);
+}
+.risk-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.risk .eyebrow { color: var(--blue); }
+.risk h2 { margin-bottom: 18px; }
+.risk-lead {
+  font-size: clamp(1.05rem, 1.6vw, 1.18rem);
+  color: var(--ink-soft);
+  max-width: 600px;
+  margin: 0 auto 36px;
+}
+.risk-points {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  text-align: left;
+  margin-bottom: 38px;
+}
+.risk-point {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+.risk-point .rp-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.risk-point h4 {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+.risk-point p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
 }
 
 /* WHO FOR */
@@ -514,6 +579,19 @@ section {
   font-size: 0.9rem;
   color: var(--ink-mute);
   line-height: 1.5;
+}
+.who-catchall {
+  text-align: center;
+  background: var(--cream-2);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-top: 28px;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+.who-catchall strong {
+  color: var(--ink);
+  font-weight: 600;
 }
 
 /* PORTFOLIO */
@@ -855,7 +933,6 @@ section {
   color: var(--blue);
   font-weight: 400;
   line-height: 1;
-  font-variation-settings: 'opsz' 144, 'SOFT' 50;
 }
 .process-content h4 {
   font-family: var(--serif);
@@ -980,8 +1057,8 @@ section {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 30%, rgba(1, 123, 253, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(1, 123, 253, 0.15) 0%, transparent 50%);
+    radial-gradient(circle at 20% 30%, rgba(27, 111, 240, 0.16) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(27, 111, 240, 0.11) 0%, transparent 50%);
   pointer-events: none;
 }
 .final-cta .container { position: relative; z-index: 1; }
@@ -996,7 +1073,6 @@ section {
 .final-cta h2 em {
   font-style: italic;
   color: var(--blue-soft);
-  font-variation-settings: 'opsz' 144, 'SOFT' 50;
 }
 .final-cta p {
   color: rgba(250, 250, 247, 0.7);
@@ -1046,10 +1122,11 @@ footer .logo img { height: 38px; }
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.hero h1, .hero-sub, .hero-cta-row, .trust-indicators {
+.hero h1, .hero-sub, .hero-offer, .hero-cta-row, .trust-indicators {
   animation: fadeUp 0.7s ease backwards;
 }
 .hero-sub { animation-delay: 0.1s; }
+.hero-offer { animation-delay: 0.15s; }
 .hero-cta-row { animation-delay: 0.2s; }
 .trust-indicators { animation-delay: 0.3s; }
 .hero-visual { animation: fadeUp 0.9s ease 0.2s backwards; }
@@ -1072,11 +1149,18 @@ footer .logo img { height: 38px; }
     <div class="hero-grid">
       <div class="hero-text">
         <span class="eyebrow">Websites for Filipino businesses</span>
-        <h1>Make your business look <em>trusted online</em> in 7 days.</h1>
-        <p class="hero-sub">Stop sending messy screenshots, old posts, and incomplete information. Give customers one professional link instead.</p>
+        <h1>Stop losing customers who <em>cannot tell</em> if you are legit.</h1>
+        <p class="hero-sub">A Facebook page and a few screenshots make even a great business look small. Give customers one professional website that earns their trust in seconds, ready in 7 days.</p>
+        <div class="hero-offer">
+          <span class="hero-offer-price">From ₱12,000</span>
+          <span class="hero-offer-dot">•</span>
+          <span>One-time payment</span>
+          <span class="hero-offer-dot">•</span>
+          <span>Live in 7 days</span>
+        </div>
         <div class="hero-cta-row">
-          <a href="https://ig.me/m/tindalytics" class="btn btn-primary">
-            Get your website started
+          <a href="https://ig.me/m/tindalytics?text=I%20want%20a%20free%20sample" class="btn btn-primary">
+            Message me for a free sample
             <span class="arrow">→</span>
           </a>
         </div>
@@ -1098,30 +1182,26 @@ footer .logo img { height: 38px; }
           </div>
           <div class="hero-mockup-body">
             <div class="mock-nav">
-              <div class="mock-logo">Maria&rsquo;s Kitchen</div>
+              <div class="mock-logo">Bloom Salon</div>
               <div class="mock-nav-links">
                 <span></span><span></span><span></span>
               </div>
             </div>
-            <div class="mock-hero-title">Home cooked meals, delivered fresh.</div>
-            <div class="mock-hero-sub"></div>
-            <div class="mock-hero-sub"></div>
-            <div class="mock-cta">Order Now →</div>
-            <div class="mock-cards">
-              <div class="mock-card">
-                <div class="mock-card-img"></div>
-                <div class="mock-card-line"></div>
-                <div class="mock-card-line short"></div>
+            <div class="mock-hero-title">Look and feel your best.</div>
+            <p class="mock-hero-text">Hair, nails, and skin care in the heart of Quezon City.</p>
+            <div class="mock-cta">Book Appointment →</div>
+            <div class="mock-services">
+              <div class="mock-service">
+                <span class="mock-service-name">Hair Color</span>
+                <span class="mock-service-price">₱1,500</span>
               </div>
-              <div class="mock-card">
-                <div class="mock-card-img"></div>
-                <div class="mock-card-line"></div>
-                <div class="mock-card-line short"></div>
+              <div class="mock-service">
+                <span class="mock-service-name">Gel Manicure</span>
+                <span class="mock-service-price">₱450</span>
               </div>
-              <div class="mock-card">
-                <div class="mock-card-img"></div>
-                <div class="mock-card-line"></div>
-                <div class="mock-card-line short"></div>
+              <div class="mock-service">
+                <span class="mock-service-name">Facial Treatment</span>
+                <span class="mock-service-price">₱800</span>
               </div>
             </div>
           </div>
@@ -1144,7 +1224,7 @@ footer .logo img { height: 38px; }
   <div class="container">
     <div class="fees-grid">
       <div>
-        <span class="eyebrow">No hidden fees ever</span>
+        <span class="eyebrow">Read this before you hire anyone</span>
         <div class="fees-headline">
           <span class="strike">₱2,500</span><br>
           monthly fees? <em>No.</em>
@@ -1162,8 +1242,8 @@ footer .logo img { height: 38px; }
         <li>
           <span class="num">02</span>
           <div>
-            <strong>Hosted under your own account.</strong><br>
-            <span style="color: rgba(250, 250, 247, 0.7);">Your domain. Your hosting. Your control. We just build it for you.</span>
+            <strong>Free hosting, for as long as you want.</strong><br>
+            <span style="color: rgba(250, 250, 247, 0.7);">I keep your site online at no cost. You own your website and your domain, and you can move it anywhere, anytime.</span>
           </div>
         </li>
         <li>
@@ -1185,13 +1265,51 @@ footer .logo img { height: 38px; }
   </div>
 </section>
 
+<!-- RISK REVERSAL -->
+<section class="risk">
+  <div class="container">
+    <div class="risk-inner">
+      <span class="eyebrow">Zero risk to find out</span>
+      <h2>See your website before you pay a single peso.</h2>
+      <p class="risk-lead">Most people hesitate because they cannot picture what they are paying for. So I take that worry away completely. I build you a real sample first, using your own business name and branding. You only decide after you see it.</p>
+      <div class="risk-points">
+        <div class="risk-point">
+          <span class="rp-icon">1</span>
+          <div>
+            <h4>You see it first, free</h4>
+            <p>I build a sample page for your actual business before any payment. No deposit, no commitment, no catch.</p>
+          </div>
+        </div>
+        <div class="risk-point">
+          <span class="rp-icon">2</span>
+          <div>
+            <h4>You only pay if you love it</h4>
+            <p>Like what you see? We move forward. Not for you? No hard feelings and you owe nothing. The decision is fully yours.</p>
+          </div>
+        </div>
+        <div class="risk-point">
+          <span class="rp-icon">3</span>
+          <div>
+            <h4>Only a few slots at a time</h4>
+            <p>I take just two to three projects at once so every client gets my full attention and a real 7 day turnaround.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://ig.me/m/tindalytics?text=I%20want%20a%20free%20sample" class="btn btn-primary">
+        Message me for my free sample
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- WHO THIS IS FOR -->
 <section class="who-for">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Who this is for</span>
-      <h2>Built for the businesses I know.</h2>
-      <p>I am a Filipino online seller myself. I understand what local businesses actually need to look professional online without overpaying.</p>
+      <span class="eyebrow">Wondering if this is for you?</span>
+      <h2>Built for businesses like yours.</h2>
+      <p>I am a Filipino online seller myself. I know what a local business needs to look professional online without overpaying. Whatever you sell, your website should make people trust you.</p>
     </div>
 
     <div class="who-grid">
@@ -1238,6 +1356,9 @@ footer .logo img { height: 38px; }
         <p>Make it easy for customers to find and contact you.</p>
       </div>
     </div>
+    <div class="who-catchall">
+      Not on the list? <strong>If you run any local business that wants to look professional online, this is for you too.</strong>
+    </div>
   </div>
 </section>
 
@@ -1245,7 +1366,7 @@ footer .logo img { height: 38px; }
 <section class="portfolio">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Sample work</span>
+      <span class="eyebrow">See what yours could look like</span>
       <h2>Designs that make small businesses look big.</h2>
       <p>Each website is custom designed for the business it serves. Here is what that looks like for different industries.</p>
     </div>
@@ -1388,7 +1509,7 @@ footer .logo img { height: 38px; }
 <section class="packages" id="packages">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Choose your package</span>
+      <span class="eyebrow">Less than you are thinking</span>
       <h2>Simple, honest pricing.</h2>
       <p>Pay once. Own everything. No subscriptions, no surprise bills.</p>
     </div>
@@ -1436,119 +1557,38 @@ footer .logo img { height: 38px; }
 <section class="process">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">How it works</span>
-      <h2>Six simple steps from start to launch.</h2>
-      <p>Organized, transparent, and easy to follow. You always know what is happening and what comes next.</p>
+      <span class="eyebrow">Easier than you expect</span>
+      <h2>Four simple steps from start to launch.</h2>
+      <p>Clear and transparent. You always know what is happening and what comes next.</p>
     </div>
 
     <div class="process-list">
       <div class="process-step">
         <span class="process-num">01</span>
         <div class="process-content">
-          <h4>Pay a 50% deposit</h4>
-          <p>Send a 50% deposit via GCash to confirm your slot. The remaining balance is paid only after you approve the final design.</p>
+          <h4>See your free sample first</h4>
+          <p>Message me and I build you a sample page using your own branding. You see your business looking professional before you pay anything.</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-num">02</span>
         <div class="process-content">
-          <h4>Submit your intake form</h4>
-          <p>A short form covering your business info, photos, services, and contact details. Everything I need to start building.</p>
+          <h4>Confirm your slot</h4>
+          <p>If you love it, a 50% deposit via GCash confirms your slot. Then you send a short intake form with your info, photos, and services.</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-num">03</span>
         <div class="process-content">
-          <h4>Website build phase</h4>
-          <p>I build your website from scratch over the next few days. You receive a private preview link to follow progress.</p>
+          <h4>Build and refine together</h4>
+          <p>I build your full website over the next few days. You get a private preview link and two rounds of revisions until it is exactly right.</p>
         </div>
       </div>
       <div class="process-step">
         <span class="process-num">04</span>
         <div class="process-content">
-          <h4>Review and revisions</h4>
-          <p>You review the draft and request changes. Two rounds of revisions are included so we get it exactly right.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <span class="process-num">05</span>
-        <div class="process-content">
-          <h4>Website launch</h4>
-          <p>Your domain is connected, hosting is configured under your own account, and your website goes live.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <span class="process-num">06</span>
-        <div class="process-content">
-          <h4>Free support period</h4>
-          <p>14 days of free support after launch. Any small fixes, content swaps, or questions are handled at no extra cost.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="trust-section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Why business owners choose this</span>
-      <h2>Everything is set up properly from day one.</h2>
-    </div>
-
-    <div class="trust-grid">
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-        </div>
-        <div>
-          <h4>Mobile friendly</h4>
-          <p>Looks beautiful on phones, tablets, and desktops.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 13 10 19 10"></polyline><polyline points="11 22 11 14 5 14"></polyline></svg>
-        </div>
-        <div>
-          <h4>Fast loading</h4>
-          <p>Optimized to load quickly even on slow mobile data.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg>
-        </div>
-        <div>
-          <h4>You own the website</h4>
-          <p>Hosted under your account. Yours forever, no lock-in.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-        </div>
-        <div>
-          <h4>No coding knowledge needed</h4>
-          <p>I handle the technical setup. You focus on your business.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        </div>
-        <div>
-          <h4>Google-ready setup</h4>
-          <p>Analytics and Search Console connected so you can grow.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
-        </div>
-        <div>
-          <h4>Free support included</h4>
-          <p>14 days of post-launch support for any small adjustments.</p>
+          <h4>Launch and support</h4>
+          <p>Your domain is connected, your site goes live on free hosting I set up, and you are officially online. Then 14 days of free support for any small fixes.</p>
         </div>
       </div>
     </div>
@@ -1559,7 +1599,7 @@ footer .logo img { height: 38px; }
 <section class="faq-section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Common questions</span>
+      <span class="eyebrow">Before you message me</span>
       <h2>Things business owners always ask.</h2>
       <p>Honest answers, no fine print.</p>
     </div>
@@ -1571,7 +1611,7 @@ footer .logo img { height: 38px; }
           <span class="faq-toggle">+</span>
         </summary>
         <div class="faq-answer">
-          The package price you see is the total cost of building your website. There are no hidden fees. The only ongoing cost is your domain renewal, which is around ₱600 a year, paid directly to your domain provider, never to me. Hosting is free under your own GitHub or Netlify account, which I set up for you during the build.
+          The package price you see is the total cost of building your website. There are no hidden fees and no monthly fees. I keep your site online for free, for as long as you want it. The only ongoing cost is your domain renewal, around ₱600 a year, paid directly to your domain provider, never to me. If you ever want to host the site yourself, I will hand over all the files so you can.
         </div>
       </details>
 
@@ -1601,7 +1641,7 @@ footer .logo img { height: 38px; }
           <span class="faq-toggle">+</span>
         </summary>
         <div class="faq-answer">
-          You can. Because the website is hosted under your own account and built on simple HTML, you have full access to make changes. I can also walk you through how to edit specific sections like menu prices, opening hours, or contact details. Many clients prefer to message me for small edits during the support period instead, which is also fine.
+          You can. Your website is yours and it is built on simple HTML, so you have full access to make changes. If you ever want to host it yourself, I will hand over all the files and help you move it. Most clients prefer to just message me for small edits like menu prices, opening hours, or contact details. The first year of small changes is included, and after that those edits are optional and only if you want them.
         </div>
       </details>
 
@@ -1631,10 +1671,10 @@ footer .logo img { height: 38px; }
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2>Ready to make your business <em>look more professional</em> online?</h2>
-    <p>I only take a few website projects at a time to keep quality high.</p>
-    <a href="https://ig.me/m/tindalytics" class="btn btn-light">
-      Message me to start
+    <h2>Want to see your business <em>look more professional</em> online?</h2>
+    <p>Message me and I will build you a free sample page using your own branding. No payment, no pressure. You only decide after you see it.</p>
+    <a href="https://ig.me/m/tindalytics?text=I%20want%20a%20free%20sample" class="btn btn-light">
+      Message me for a free sample
       <span class="arrow">→</span>
     </a>
   </div>
