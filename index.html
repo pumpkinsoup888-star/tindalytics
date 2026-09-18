@@ -596,135 +596,59 @@ section {
 
 /* PORTFOLIO */
 .portfolio { background: var(--cream-2); }
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-}
-.portfolio-card {
-  background: white;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+.work-grid { display: flex; flex-direction: column; gap: 56px; }
+.work-row { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: center; }
+.work-frame {
+  display: block; text-decoration: none; color: inherit;
+  border-radius: var(--radius);
+  overflow: hidden; background: #fff;
   border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.portfolio-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+.work-frame:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.wf-chrome {
+  display: flex; align-items: center; gap: 12px;
+  background: #EFEDE7; padding: 10px 13px; border-bottom: 1px solid #E2DED7;
 }
-.portfolio-mock {
-  height: 220px;
-  position: relative;
-  overflow: hidden;
+.wf-dots { display: flex; gap: 7px; }
+.wf-dots i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+.wf-dots i:nth-child(1) { background: #ff5f57; }
+.wf-dots i:nth-child(2) { background: #febc2e; }
+.wf-dots i:nth-child(3) { background: #28c840; }
+.wf-url {
+  flex: 1; background: #fff; border: 1px solid #E2DED7; border-radius: 8px;
+  padding: 6px 12px; font-family: var(--sans); font-size: 0.78rem; color: #6A6A6A;
+  display: flex; align-items: center; gap: 7px; white-space: nowrap; overflow: hidden;
 }
-.portfolio-info {
-  padding: 24px 24px 28px;
+.wf-live {
+  font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--success);
+  display: flex; align-items: center; gap: 5px; padding-right: 2px;
 }
-.portfolio-info .category {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 6px;
+.wf-live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #28c840; display: block; }
+.work-frame img { display: block; width: 100%; height: auto; }
+.work-copy .category {
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 8px;
 }
-.portfolio-info h4 {
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-.portfolio-info p {
-  font-size: 0.95rem;
-  color: var(--ink-soft);
-  margin-bottom: 16px;
-}
+.work-copy h4 { font-family: var(--serif); font-weight: 500; font-size: 1.5rem; line-height: 1.12; margin-bottom: 12px; }
+.work-copy p { font-size: 0.98rem; color: var(--ink-soft); margin-bottom: 20px; }
+.work-chips { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .mobile-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--navy);
-  background: var(--cream-2);
-  padding: 6px 12px;
-  border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--navy);
+  background: var(--cream-2); padding: 6px 14px; border-radius: 999px;
 }
+.work-live-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(--blue); text-decoration: none;
+}
+.work-live-link:hover { text-decoration: underline; }
 
-/* Portfolio mockup variations */
-.mock-cafe {
-  background: linear-gradient(135deg, #E8C8A0 0%, #C99B6A 100%);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.mock-restaurant {
-  background: linear-gradient(135deg, #2D1810 0%, #5C2E1F 100%);
-  padding: 24px;
-  color: white;
-}
-.mock-clinic {
-  background: linear-gradient(135deg, #E8F4F8 0%, #B8DCE8 100%);
-  padding: 24px;
-}
-.mock-salon {
-  background: linear-gradient(135deg, #F4E4E4 0%, #D9A5A5 100%);
-  padding: 24px;
-}
-.mock-store {
-  background: linear-gradient(135deg, #1E3A2E 0%, #2D5A40 100%);
-  padding: 24px;
-  color: white;
-}
-.mp-title {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  line-height: 1.05;
-  margin-bottom: 6px;
-  font-weight: 500;
-}
-.mp-sub {
-  font-size: 0.75rem;
-  opacity: 0.75;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-.mp-tagline {
-  font-size: 0.85rem;
-  margin-bottom: 14px;
-  opacity: 0.85;
-  line-height: 1.4;
-}
-.mp-pill {
-  display: inline-block;
-  padding: 5px 12px;
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--navy);
-  font-size: 0.7rem;
-  font-weight: 600;
-  border-radius: 999px;
-}
-.mock-restaurant .mp-pill,
-.mock-store .mp-pill {
-  background: rgba(255, 255, 255, 0.95);
-}
-.mp-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin-top: 12px;
-}
-.mp-grid div {
-  aspect-ratio: 1/1;
-  background: rgba(255, 255, 255, 0.35);
-  border-radius: 5px;
-}
-.mock-restaurant .mp-grid div,
-.mock-store .mp-grid div {
-  background: rgba(255, 255, 255, 0.18);
+@media (min-width: 860px) {
+  .work-row { grid-template-columns: 1.4fr 1fr; gap: 44px; }
+  .work-row.reverse .work-frame { order: 2; }
+  .work-row.reverse .work-copy { order: 1; }
 }
 
 /* BEFORE / AFTER */
@@ -1101,10 +1025,7 @@ footer .logo img { height: 38px; }
   .ba-grid { grid-template-columns: 1fr 1fr; }
   .trust-grid { grid-template-columns: repeat(3, 1fr); }
   .pkg-grid { grid-template-columns: 1fr 1fr; }
-  .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .fees-grid { grid-template-columns: 1.2fr 1fr; }
-  .portfolio-card:first-child { grid-column: 1 / -1; }
-  .portfolio-card:first-child .portfolio-mock { height: 280px; }
 }
 
 @media (min-width: 1024px) {
@@ -1112,9 +1033,6 @@ footer .logo img { height: 38px; }
   .hero { padding: 80px 0 110px; }
   .hero-grid { grid-template-columns: 1.05fr 1fr; align-items: start; }
   .who-grid { grid-template-columns: repeat(3, 1fr); }
-  .portfolio-grid { grid-template-columns: 1fr 1fr; }
-  .portfolio-card:first-child { grid-column: 1 / -1; }
-  .portfolio-card:first-child .portfolio-mock { height: 340px; }
 }
 
 /* ANIMATIONS */
@@ -1371,99 +1289,97 @@ footer .logo img { height: 38px; }
       <p>Each website is custom designed for the business it serves. Here is what that looks like for different industries.</p>
     </div>
 
-    <div class="portfolio-grid">
+    <div class="work-grid">
 
-      <div class="portfolio-card">
-        <div class="portfolio-mock mock-cafe">
-          <div>
-            <div class="mp-sub">Established 2019</div>
-            <div class="mp-title">Sunday Roast Café</div>
-            <div class="mp-tagline">Slow brewed coffee, quiet mornings, made in Quezon City.</div>
-          </div>
-          <div>
-            <span class="mp-pill">View menu →</span>
-            <div class="mp-grid">
-              <div></div><div></div><div></div>
+      <div class="work-row">
+        <a class="work-frame" href="https://bubblefairycolaundry.netlify.app" target="_blank" rel="noopener">
+          <div class="wf-chrome">
+            <div class="wf-dots"><i></i><i></i><i></i></div>
+            <div class="wf-url">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M6 10V8a6 6 0 1112 0v2" stroke="#8a8a8a" stroke-width="2"/><rect x="4" y="10" width="16" height="10" rx="2" fill="#8a8a8a"/></svg>
+              bubblefairyco.ph
             </div>
+            <span class="wf-live">Live</span>
           </div>
-        </div>
-        <div class="portfolio-info">
-          <div class="category">Café Website</div>
-          <h4>A café that finally feels like itself online.</h4>
-          <p>Warm photography, menu pricing customers can actually read, and a location map that opens directly in Waze.</p>
-          <span class="mobile-badge">📱 Mobile friendly</span>
+          <img src="work-bubble.jpg" alt="Bubble Fairy and Co laundry website" loading="lazy">
+        </a>
+        <div class="work-copy">
+          <div class="category">Laundry Website</div>
+          <h4>A laundromat that books pickups while you sleep.</h4>
+          <p>Playful branding, pricing anyone can read, and a Book a Pickup button that lands straight in their inbox.</p>
+          <div class="work-chips">
+            <span class="mobile-badge">📱 Mobile friendly</span>
+            <a class="work-live-link" href="https://bubblefairycolaundry.netlify.app" target="_blank" rel="noopener">Visit the live site →</a>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-card">
-        <div class="portfolio-mock mock-restaurant">
-          <div class="mp-sub">Dine in · Takeout · Delivery</div>
-          <div class="mp-title">Tito Boy&rsquo;s Lutong Bahay</div>
-          <div class="mp-tagline">Filipino comfort food, served every day.</div>
-          <span class="mp-pill">Reserve a table</span>
-          <div class="mp-grid">
-            <div></div><div></div><div></div>
+      <div class="work-row reverse">
+        <a class="work-frame" href="https://silogsupplyco.netlify.app" target="_blank" rel="noopener">
+          <div class="wf-chrome">
+            <div class="wf-dots"><i></i><i></i><i></i></div>
+            <div class="wf-url">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M6 10V8a6 6 0 1112 0v2" stroke="#8a8a8a" stroke-width="2"/><rect x="4" y="10" width="16" height="10" rx="2" fill="#8a8a8a"/></svg>
+              silogsupplyco.ph
+            </div>
+            <span class="wf-live">Live</span>
           </div>
-        </div>
-        <div class="portfolio-info">
-          <div class="category">Restaurant Website</div>
-          <h4>A menu that travels well on mobile.</h4>
-          <p>Customers see the menu, prices, and contact details without needing to scroll through Facebook posts.</p>
-          <span class="mobile-badge">📱 Mobile friendly</span>
+          <img src="work-silog.jpg" alt="Silog Supply Co eatery website" loading="lazy">
+        </a>
+        <div class="work-copy">
+          <div class="category">Filipino Eatery</div>
+          <h4>A silog spot that looks as good as it tastes.</h4>
+          <p>Real food photos, a menu you can scan in seconds, and Order Now sitting right up top.</p>
+          <div class="work-chips">
+            <span class="mobile-badge">📱 Mobile friendly</span>
+            <a class="work-live-link" href="https://silogsupplyco.netlify.app" target="_blank" rel="noopener">Visit the live site →</a>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-card">
-        <div class="portfolio-mock mock-clinic">
-          <div class="mp-sub">Dental & Orthodontics</div>
-          <div class="mp-title">Brightsmile Dental Clinic</div>
-          <div class="mp-tagline">Gentle, modern dental care in the heart of Pasig.</div>
-          <span class="mp-pill">Book appointment</span>
-          <div class="mp-grid">
-            <div></div><div></div><div></div>
+      <div class="work-row">
+        <a class="work-frame" href="https://ateliernoirpaintings.netlify.app" target="_blank" rel="noopener">
+          <div class="wf-chrome">
+            <div class="wf-dots"><i></i><i></i><i></i></div>
+            <div class="wf-url">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M6 10V8a6 6 0 1112 0v2" stroke="#8a8a8a" stroke-width="2"/><rect x="4" y="10" width="16" height="10" rx="2" fill="#8a8a8a"/></svg>
+              ateliernoir.com
+            </div>
+            <span class="wf-live">Live</span>
           </div>
-        </div>
-        <div class="portfolio-info">
-          <div class="category">Clinic Website</div>
-          <h4>Trust built before the first appointment.</h4>
-          <p>Patient testimonials, service list, and easy booking. Everything a new patient needs to commit to a visit.</p>
-          <span class="mobile-badge">📱 Mobile friendly</span>
+          <img src="work-atelier.jpg" alt="Atelier Noir gallery website" loading="lazy">
+        </a>
+        <div class="work-copy">
+          <div class="category">Artist and Gallery</div>
+          <h4>A gallery where the work speaks first.</h4>
+          <p>Full bleed paintings, quiet type that stays out of the way, and an Inquire link for serious buyers.</p>
+          <div class="work-chips">
+            <span class="mobile-badge">📱 Mobile friendly</span>
+            <a class="work-live-link" href="https://ateliernoirpaintings.netlify.app" target="_blank" rel="noopener">Visit the live site →</a>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-card">
-        <div class="portfolio-mock mock-salon">
-          <div class="mp-sub">Hair · Nails · Skin</div>
-          <div class="mp-title">Halo Beauty Studio</div>
-          <div class="mp-tagline">Refined beauty services for women who value their time.</div>
-          <span class="mp-pill">See services</span>
-          <div class="mp-grid">
-            <div></div><div></div><div></div>
+      <div class="work-row reverse">
+        <a class="work-frame" href="https://elmolecohete.netlify.app" target="_blank" rel="noopener">
+          <div class="wf-chrome">
+            <div class="wf-dots"><i></i><i></i><i></i></div>
+            <div class="wf-url">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M6 10V8a6 6 0 1112 0v2" stroke="#8a8a8a" stroke-width="2"/><rect x="4" y="10" width="16" height="10" rx="2" fill="#8a8a8a"/></svg>
+              elmolecohete.ph
+            </div>
+            <span class="wf-live">Live</span>
           </div>
-        </div>
-        <div class="portfolio-info">
-          <div class="category">Salon Website</div>
-          <h4>A salon that looks as beautiful as the work.</h4>
-          <p>Service menu with clear pricing, before and after gallery, and a contact button that opens directly to Messenger.</p>
-          <span class="mobile-badge">📱 Mobile friendly</span>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="portfolio-mock mock-store">
-          <div class="mp-sub">Handmade · Made in PH</div>
-          <div class="mp-title">Likha Handmade Goods</div>
-          <div class="mp-tagline">Artisan home pieces, woven by Filipino makers.</div>
-          <span class="mp-pill">Shop collection</span>
-          <div class="mp-grid">
-            <div></div><div></div><div></div>
+          <img src="work-mole.jpg" alt="El Mole Cohete taqueria website" loading="lazy">
+        </a>
+        <div class="work-copy">
+          <div class="category">Mexican Restaurant</div>
+          <h4>A taqueria with the personality turned all the way up.</h4>
+          <p>Bold colour, a logo with character, and a menu built to make you hungry before you scroll.</p>
+          <div class="work-chips">
+            <span class="mobile-badge">📱 Mobile friendly</span>
+            <a class="work-live-link" href="https://elmolecohete.netlify.app" target="_blank" rel="noopener">Visit the live site →</a>
           </div>
-        </div>
-        <div class="portfolio-info">
-          <div class="category">Online Store</div>
-          <h4>A storefront that finally looks like a brand.</h4>
-          <p>Products displayed properly, with prices, shipping info, and a clean inquiry flow that does not bury customers in chat threads.</p>
-          <span class="mobile-badge">📱 Mobile friendly</span>
         </div>
       </div>
 
